@@ -232,8 +232,8 @@ define Device/dlink_dir-860l-b1
   DEVICE_PACKAGES := kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport wpad-openssl
   SUPPORTED_DEVICES += dir-860l-b1
 endef
-TARGET_DEVICES += dlink_dir-860l-b1
 
+<<<<<<< HEAD
 define Device/dlink_dir-867-a1
   $(Device/dlink_dir-8xx-a1)
   DEVICE_MODEL := DIR-867
@@ -255,6 +255,27 @@ define Device/dlink_dir-882-a1
   DEVICE_PACKAGES += kmod-usb3 kmod-usb-ledtrig-usbport
 endef
 TARGET_DEVICES += dlink_dir-882-a1
+=======
+define Device/dlink_dir-878-a1
+  IMAGE_SIZE := 16064k
+  DEVICE_VENDOR := D-Link
+  DEVICE_MODEL := DIR-878
+	DEVICE_VARIANT := A1
+  DEVICE_PACKAGES := kmod-mt7615d luci-app-mtwifi uboot-envtools
+	SUPPORTED_DEVICES += dir-878-a1
+endef
+
+define Device/dlink_dir-882-a1
+  IMAGE_SIZE := 16064k
+  DEVICE_VENDOR := D-Link
+  DEVICE_MODEL := DIR-882
+	DEVICE_VARIANT := A1
+  DEVICE_PACKAGES := kmod-mt7615d luci-app-mtwifi uboot-envtools
+	SUPPORTED_DEVICES += dir-882-a1
+endef
+
+TARGET_DEVICES += dlink_dir-860l-b1
+>>>>>>> parent of c9bd4acac... fix missing dir-882 and dir-878 and enable mt7615d's LED default n (#5039)
 
 define Device/d-team_newifi-d2
   $(Device/uimage-lzma-loader)
@@ -598,14 +619,16 @@ define Device/mikrotik_routerboard-m33g
 endef
 TARGET_DEVICES += mikrotik_routerboard-m33g
 
+<<<<<<< HEAD
 define Device/motorola_mr2600
   IMAGE_SIZE := 16064k
   DEVICE_VENDOR := Motorola
   DEVICE_MODEL := MR2600
   DEVICE_PACKAGES := kmod-mt7615d kmod-usb3 kmod-usb-ledtrig-usbport luci-app-mtwifi uboot-envtools
 endef
+=======
+>>>>>>> parent of c9bd4acac... fix missing dir-882 and dir-878 and enable mt7615d's LED default n (#5039)
 TARGET_DEVICES += motorola_mr2600
-
 define Device/mqmaker_witi
   IMAGE_SIZE := 16064k
   DEVICE_VENDOR := MQmaker
